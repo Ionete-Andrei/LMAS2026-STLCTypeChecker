@@ -1,0 +1,7 @@
+name = "STLCTypeChecker"
+version = "0.1.0"
+defaultTargets = ["stlctypechecker"]
+
+[[lean_exe]]
+name = "stlctypechecker"
+root = "STLCTypeChecker"
