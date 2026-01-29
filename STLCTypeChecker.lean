@@ -486,3 +486,7 @@ def badApp : Term :=
 def varInContext : Term := Term.var "x"
 #eval inferTypeStr Context.empty varInContext
 #eval inferTypeStr (Context.empty.extend "x" (SimpleType.base "Nat")) varInContext
+
+def testApp2: Term :=
+  Term.lam "x" (SimpleType.base "Nat") (Term.lam "x" (SimpleType.base "Bool") (Term.var "x"))
+#eval inferTypeStr Context.empty testApp2
